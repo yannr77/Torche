@@ -10,6 +10,7 @@ class ApplicationController < ActionController::Base
   end
   
   def photos
-    @title= "photos"
+    @title= "Photos"
+  end
   
 end

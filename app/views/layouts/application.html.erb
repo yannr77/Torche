@@ -8,23 +8,21 @@
 	<div id="en_tete">
 		<h1><%= @title %></h1>
 	</div>
-	
 	<%= render(:partial => "application/menu") %>
 
 	<%= yield %>
 	
-		<div class="navigation footer">
-			<a href="#en_tete"> Haut de page </a><br />
-		</div>
+	<div id="navigation footer">
+		<a href="#en_tete"> Haut de page </a><br />
 	</div>
 
+
 	<div id="pied_de_page" class="pied_de_page"><p>
-	Code et Design par Neya. Premier site avec Ruby On Rails.
-	2011.<br />
-			<div id="contact">
-			Me contacter <%= mail_to "yann.r.77@gmail.com", "e-mail", :encode => "javascript" %>
-			</div>
-		</p>
+		Code et Design par Neya. Premier site avec Ruby On Rails.
+		2011.</p><br />
+		<div id="contact">
+			<p>Me contacter <%= mail_to "yann.r.77@gmail.com", "e-mail", :encode => "javascript" %></p>
+		</div>
 	</div>
 </body>
 

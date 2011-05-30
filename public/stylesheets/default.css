@@ -1,8 +1,50 @@
-/*Police :Couleur beauté*/
 html{
 	background-color: #667FA0;
-	
 }
+
+/*LES TITRES ET ELEMENTS*/
+
+h1{
+	text-align: center;
+	font-size: 30px;
+	font-weight: bold;
+	padding: 20px;
+	color: #6699FF;
+}
+h2{
+	font-size: 18px;
+	font-weight: bold;
+	color: #6699FF;
+	margin: 5px;
+}
+p, blockquote{
+
+	text-align: justify;
+	text-indent: 30px;
+}
+em{
+	font-style: italic;
+	color: silver;
+}
+a{
+	color: orange;
+}
+a:hover{
+	font-weight: bold;
+}
+.photo{
+	text-align: center;
+	margin-top: 30px;
+}
+.photo .caption{
+	text-align: center;
+	margin-top: 8px;
+	margin-bottom: 30px;
+	font-size: 15px;
+	color:#8AB1CC;
+}
+
+/* La structure */
 
 body{
 	font-family: Skia, "Trebuchet MS";
@@ -12,94 +54,33 @@ body{
 	padding: 0px 5px;
 	background-color: #fff;
 }
-
-.presentation{
-	width: 500px ;
+.corps{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 60px;
+	margin-right: 60px;
 }
-
-.surf{
-	width: 700px;
-}
-
-
-h1{
-	text-align: center;
-	font-size: 30px;
-	font-weight: bold;
-	padding: 20px;
-	color: #6699FF;
-}
-
-h2{
-	font-size: 18px;
-	font-weight: bold;
-	color: #6699FF;
-	margin: 5px;
-}
-
-
-
-p, blockquote{
-
-	text-align: justify;
-	text-indent: 30px;
-}
-
-em{
-	font-style: italic;
-	color: silver;
-}
-
-a{
-	color: orange;
-}
-
-a:hover{
-	font-weight: bold;
-}
-
-.photo{
-	text-align: center;
-	margin-top: 30px;
-}
-
-.photo .caption{
-	text-align: center;
-	margin-bottom: 30px;
-}
-
-/* La structure */
-
 .menu{
 	width: 200px;
 	float: left;
-	margin-left: 12px;
 	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 60px;
+	margin-right: 20px;	
 }
-
 .sous_menu{
-	width: 200px;
 	margin-top:20px;
 	border: 2px solid;	
 }
-
-
 .sous_menu h3{
 	text-align: center;
+	color: #6699FF;
 }
 .sous_menu li{
 	margin-left: 10px;
 	margin-top: 6px;
-	margin-bottom: 6px;
-	
+	margin-bottom: 6px;	
 }
-
-.corps{
-	margin-top: 20px;
-	padding: 10px;
-
-}
-
 .pied_de_page{
 	clear: left;
 	margin-top: 30px;

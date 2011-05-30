@@ -9,5 +9,7 @@ class ApplicationController < ActionController::Base
     @title= "Surf"
   end
   
+  def photos
+    @title= "photos"
   
 end

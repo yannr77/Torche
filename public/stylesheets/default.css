@@ -78,10 +78,10 @@ a:hover{
 }
 
 .sous_menu{
+	width: 200px;
 	margin-top:20px;
 	border: 2px solid;	
 }
-
 
 
 .sous_menu h3{
@@ -95,7 +95,6 @@ a:hover{
 }
 
 .corps{
-	margin-left: 22%;
 	margin-top: 20px;
 	padding: 10px;
 

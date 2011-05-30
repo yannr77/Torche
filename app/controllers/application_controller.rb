@@ -5,4 +5,9 @@ class ApplicationController < ActionController::Base
     @title= "Beg an Dorchenn"
   end
   
+  def surf
+    @title= "Surf"
+  end
+  
+  
 end

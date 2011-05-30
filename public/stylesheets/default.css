@@ -67,6 +67,11 @@ body{
 	margin-left: 60px;
 	margin-right: 60px;
 }
+
+.corps_photos{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
 .menu{
 	width: 200px;
 	float: left;
@@ -92,4 +97,15 @@ body{
 	clear: left;
 	margin-top: 30px;
 	padding:5px ;
+}
+
+/*TESTTTTTTTTTTTTTT*/
+
+.photos img {
+	width: 200px;
+	height: 160px;
+}
+.photos img:hover {
+	width: 280px;
+	height: 220px;
 }

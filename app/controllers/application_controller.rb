@@ -11,5 +11,6 @@ class ApplicationController < ActionController::Base
   
   def photos
     @title= "photos"
+  end
   
 end

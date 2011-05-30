@@ -1,7 +1,20 @@
-
-
-
-<li><%= link_to("Les caractéristiques du site: ", {:anchor=>"caracteristique"}) %></li>
-<li><%= link_to("Les concours ", {:anchor=>"concours"}) %></li>
-<li><%= link_to("Les photos", {:anchor=>"photos"}) %></li>
-	<li><%= link_to "Les caractéristiques du site:", surf_url %></li>
+<div id="menu">
+	<div class="sous_menu">
+		<h3>Le lieu:</h3>
+			<ul>
+				<li><%= link_to("Présentation: ", root_url(:anchor=>"presentation") ) %></li>
+				<li><%= link_to("Géographie: ", root_url(:anchor=>"geographie") ) %></li>
+				<li><%= link_to("Histoire: ", root_url(:anchor=>"histoire") ) %></li>
+				<li><%= link_to("Loisirs: ", root_url(:anchor=>"loisirs") ) %></li>
+				<li><%= link_to("Faune et flore: ", root_url(:anchor=>"faune_flore") ) %></li>
+			</ul>
+	</div>
+	<div class="sous_menu">
+		<h3>Surf:</h3>
+			<ul>
+				<li><%= link_to("Les caractéristiques du site: ", surf_url(:anchor=>"caracteristique") ) %></li>
+				<li><%= link_to("Les concours: ", surf_url(:anchor=>"concours") ) %></li>
+				<li><%= link_to("Les photos: ", surf_url(:anchor=>"photos") ) %></li>
+			</ul>
+	</div>
+</div>

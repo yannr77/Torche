@@ -1,5 +1,5 @@
 class Surfer < ActiveRecord::Base
-  
+    belongs_to :state
   
     validates :name, :presence => true
     validates :firstname, :presence => true

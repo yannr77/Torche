@@ -4,3 +4,5 @@
 	Un surfer est défini par :
 		nom
 		prénom
+		
+	bundle exec rake db:migrate

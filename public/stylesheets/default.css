@@ -26,11 +26,24 @@ em{
 	font-style: italic;
 	color: silver;
 }
+
 a{
 	color: orange;
 }
+
 a:hover{
 	font-weight: bold;
+}
+th{
+	 border-width: 1px;
+	 border-style: solid; 
+	 border-color: silver;
+}
+td{
+	border-width: 1px;
+	border-style: solid; 
+	border-color: silver;
+	padding: 5px;
 }
 
 .photo{
@@ -44,6 +57,7 @@ a:hover{
 	margin-right: 6px;
 	
 }
+
 .photo .caption{
 	text-align: center;
 	margin-top: 8px;

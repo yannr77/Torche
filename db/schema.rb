@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(:version => 20110531131224) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "email"
   end
 
 end

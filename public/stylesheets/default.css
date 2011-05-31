@@ -32,6 +32,7 @@ a{
 a:hover{
 	font-weight: bold;
 }
+
 .photo{
 	text-align: center;
 	margin-top: 30px;
@@ -51,10 +52,19 @@ a:hover{
 	color:#8AB1CC;
 }
 
+.photos img {
+	width: 200px;
+	height: 160px;
+}
+.photos img:hover {
+	width: 280px;
+	height: 220px;
+}
+
 /* La structure */
 
 body{
-	font-family: Skia, "Trebuchet MS";
+	font-family: Skia, "Trebuchet MS", verdana, arial, helvetica, sans-serif;
 	font-size: 15px;	
 	width: 800px;
 	margin: 40px auto;
@@ -100,13 +110,39 @@ body{
 	padding:5px ;
 }
 
-/*TESTTTTTTTTTTTTTT*/
+/* Scaffold.css*/
 
-.photos img {
-	width: 200px;
-	height: 160px;
+#notice {
+  color: green;
 }
-.photos img:hover {
-	width: 280px;
-	height: 220px;
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
 }

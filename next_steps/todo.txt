@@ -1,6 +1,6 @@
-1 Forker le projet sur github
-2 Télécharger le projet sur ta machine
-3 Remplacer la phrase :
-	Thomas a tort ! Ha ha ha !
-4 Commiter les changements, les renvoyer sur github, demander un pull à rougecardinal
-5 On fait le point sur rails
+1 Utiliser le scaffolding pour créer les surfers:
+	rails generate scaffold NOM_DU_MODELE_AU_SINGULIER ATTRIBUT_1:TYPE ATTRIBUT_2:TYPE
+
+	Un surfer est défini par :
+		nom
+		prénom

@@ -5,3 +5,15 @@
 		nom
 		prénom
 		
+
+2 Ajouter un email
+
+3 Ajouter un numéro de téléphone
+
+4 Ajouter une liste de niveau pour les surfers (débutant, moyen, confirmé)
+rails generate model State name:string
+5 Un surfer a un niveau
+
+6 Aouter une liste des boards avec au moins un nom et un autre attribut (taille, ou couleur)
+
+7 Un surfer a une ou plusieurs planches

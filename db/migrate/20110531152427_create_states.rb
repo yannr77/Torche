@@ -5,6 +5,11 @@ class CreateStates < ActiveRecord::Migration
 
       t.timestamps
     end
+    
+    ["debutant", "moyen", "confirme"].each do |name| 
+      State.create(:name => name)
+    end
+
   end
 
   def self.down

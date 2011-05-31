@@ -6,6 +6,7 @@
 </head>
 <body>
 	<div id="en_tete">
+		<%= Time.now.strftime("%d-%m-%Y %H:%M") %>
 		<h1><%= @title %></h1>
 	</div>
 	<%= render(:partial => "application/menu") %>

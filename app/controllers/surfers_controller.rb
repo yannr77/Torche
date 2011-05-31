@@ -2,7 +2,7 @@ class SurfersController < ApplicationController
   # GET /surfers
   # GET /surfers.xml
   def index
-    @surfers = Surfer.all
+    @surfers = Surfer.all #récupère tout les surfrs dans la variable @surfers
 
     respond_to do |format|
       format.html # index.html.erb

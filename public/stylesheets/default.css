@@ -87,6 +87,7 @@ body{
 .sous_menu h3{
 	text-align: center;
 	color: #6699FF;
+	margin-top:5px;
 }
 .sous_menu li{
 	margin-left: 10px;

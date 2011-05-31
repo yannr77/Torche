@@ -4,7 +4,7 @@
   <tr>
     <th>Firstname</th>
     <th>Name</th>
-    <th></th>
+    <th>Email</th>
     <th></th>
     <th></th>
   </tr>
@@ -13,7 +13,8 @@
   <tr>
     <td><%= surfer.firstname %></td>
     <td><%= surfer.name %></td>
-    <td><%= link_to 'Show', surfer %></td>
+    <td><%= surfer.email %></td>    
+		<td><%= link_to 'Show', surfer %></td>
     <td><%= link_to 'Edit', edit_surfer_path(surfer) %></td>
     <td><%= link_to 'Destroy', surfer, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>

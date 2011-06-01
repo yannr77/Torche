@@ -9,6 +9,8 @@ Torche::Application.routes.draw do
   # Sample of regular route:
   match 'surf' => 'application#surf', :as => "surf"
   match 'photos'  => 'application#photos', :as =>"photos"
+  match 'surfers'  => 'surfers#index', :as =>"surfers"
+  match 'boards'  => 'boards#index', :as =>"boards"
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:

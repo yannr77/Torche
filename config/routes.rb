@@ -1,4 +1,6 @@
 Torche::Application.routes.draw do
+  resources :boards
+
   resources :surfers
 
   # The priority is based upon order of creation:

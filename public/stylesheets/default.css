@@ -34,12 +34,8 @@ a{
 a:hover{
 	font-weight: bold;
 }
-th{
-	 border-width: 1px;
-	 border-style: solid; 
-	 border-color: silver;
-}
-td{
+
+td, th{
 	border-width: 1px;
 	border-style: solid; 
 	border-color: silver;

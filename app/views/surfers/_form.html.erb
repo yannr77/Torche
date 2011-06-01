@@ -27,6 +27,11 @@
     <%= f.label :tel %><br />
     <%= f.text_field :tel %>
   </div>
+
+
+	<%= collection_select(:surfer, :state_id, State.all, :id, :name_capitalize) %>
+	
+	
 	<div class="actions">
     <%= f.submit %>
   </div>

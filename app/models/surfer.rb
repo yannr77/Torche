@@ -1,5 +1,6 @@
 class Surfer < ActiveRecord::Base
     belongs_to :state
+    has_many :boards
   
     validates :name, :presence => true
     validates :firstname, :presence => true

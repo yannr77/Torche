@@ -1,21 +1,27 @@
 <h1>Listing boards</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Size</th>
-  </tr>
+<div class="photo">
+	<img src="/images/La_Torche.jpeg" alt="Coucher de soleil sur la plage" title="Coucher de soleil :)"   height="300" width="400" /><p class="caption">Coucher de soleil</p>
+</div>
 
-<% @boards.each do |board| %>
-  <tr>
-    <td><%= board.name %></td>
-    <td><%= board.size %></td>
-    <td><%= link_to 'Show', board %></td>
-    <td><%= link_to 'Edit', edit_board_path(board) %></td>
-    <td><%= link_to 'Destroy', board, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+<div class="table">
+	<table>
+  	<tr>
+    	<th>Name</th>
+    	<th>Size</th>
+  	</tr>
+
+	<% @boards.each do |board| %>
+  	<tr>
+    	<td class="ligne"><%= board.name %></td>
+    	<td class="ligne"><%= board.size %></td>
+    	<td class="ligne"><%= link_to 'Show', board %></td>
+    	<td class="ligne"><%= link_to 'Edit', edit_board_path(board) %></td>
+    	<td class="ligne"><%= link_to 'Destroy', board, :confirm => 'Are you sure?', :method => :delete %></td>
+  	</tr>
+		<% end %>
+	</table>
+</div>
 
 <br />
 

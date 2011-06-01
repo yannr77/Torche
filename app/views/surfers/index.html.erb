@@ -1,25 +1,31 @@
 <h1>Listing surfers</h1>
 
-<table>
-  <tr>
-    <th>Firstname</th>
-    <th>Name</th>
-    <th>Email</th>
-    <th>Tel</th>
-  </tr>
+<div class="photo">
+	<img src="/images/La_Torche.jpeg" alt="Coucher de soleil sur la plage" title="Coucher de soleil :)"   height="300" width="400" /><p class="caption">Coucher de soleil</p>
+</div>
 
-<% @surfers.each do |surfer| %>
-  <tr>
-    <td><%= surfer.firstname %></td>
-    <td><%= surfer.name %></td>
-    <td><%= surfer.email %></td> 
-   	<td><%= surfer.tel %></td> 
-		<td><%= link_to 'Show', surfer %></td>
-    <td><%= link_to 'Edit', edit_surfer_path(surfer) %></td>
-    <td><%= link_to 'Destroy', surfer, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+<div class="table">
+	<table>
+  	<tr>
+    	<th>Firstname</th>
+    	<th>Name</th>
+    	<th>Email</th>
+    	<th>Tel</th>
+  	</tr>
+
+	<% @surfers.each do |surfer| %>
+  	<tr>
+    	<td class="ligne"><%= surfer.firstname %></td>
+    	<td class="ligne"><%= surfer.name %></td>
+    	<td class="ligne"><%= surfer.email %></td> 
+   		<td class="ligne"><%= surfer.tel %></td> 
+			<td class="ligne"><%= link_to 'Show', surfer %></td>
+    	<td class="ligne"><%= link_to 'Edit', edit_surfer_path(surfer) %></td>
+    	<td class="ligne"><%= link_to 'Destroy', surfer, :confirm => 'Are you sure?', :method => :delete %></td>
+  	</tr>
+		<% end %>
+	</table>
+</div>
 
 <br />
 

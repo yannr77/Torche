@@ -1,7 +1,9 @@
 class Surfer < ActiveRecord::Base
     belongs_to :state
-    has_many :boards
   
+    has_many :board_surfers
+    has_many :boards, :through =>  :board_surfers
+    
     validates :name, :presence => true
     validates :firstname, :presence => true
     validates :email, :presence => true

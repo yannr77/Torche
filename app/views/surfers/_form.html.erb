@@ -32,14 +32,10 @@
 	<%= collection_select(:surfer, :state_id, State.all, :id, :name_capitalize) %> <br />
 
 	<% Board.all.each do |board| %>
-		<% if board.surfers.include? @surfer %>
-			<input type="checkbox" name="boards[<%= board.id %>]" checked="checked"> <%= board.name %>
-		<% else %>
-			<input type="checkbox" name="boards[<%= board.id %>]"> <%= board.name %>
+		<%= input_checkbox_boards board, @surfer %>
+		<%= board.name %>
 		<% end %>
-	<% end %>
 	
-<!--   -->
 	<div class="actions">
     <%= f.submit %>
   </div>

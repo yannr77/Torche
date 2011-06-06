@@ -45,12 +45,21 @@ class SurfersController < ApplicationController
       # 3 Revient à retirer toutes les boards non présentes dans le hash params[:boards]
       
     Rails.logger.debug { "Boards recu en param : #{params[:boards]}" }  
-    params[:boards].each do |key, value|
-      Rails.logger.debug { "board : #{key} , value #{value}" }
-       board = Board.find(key)
-       @surfer.boards<< board if !@surfer.boards.include? board
-    end
 
+    #Gestion des boards non cochées
+    check_boards = params[:boards].map { |id, value| Board.find(id) }
+    uncheck_boards = Board.all - check_boards
+
+    # Gestion des boards cochées
+    check_boards.each do |board|
+      @surfer.boards<< board if !@surfer.boards.include? board
+    end    
+    
+    uncheck_boards.each do |board|
+      @surfer.boards.delete(board)
+    end
+    
+    
     respond_to do |format|
       if @surfer.update_attributes(params[:surfer])
         format.html { redirect_to(@surfer, :notice => 'Surfer was successfully updated.') }

@@ -35,8 +35,21 @@ class SurfersController < ApplicationController
   # PUT /surfers/1
   def update
     @surfer = Surfer.find(params[:id])
+      # 1 N'ajouter la board que si elle n'est pas déjà présente
+        # - verifier qu'elle est présente.
+        # - si elle l'est, ne pas l'ajouter, sinon l'ajouter
+      # 2 Retirer toutes les boards décochées:
+        # - verifier les board cochées
+        # - si elle est cochée et présente on touche pas, 
+        # - si elle n'est pas coché et présente on suppr
+      # 3 Revient à retirer toutes les boards non présentes dans le hash params[:boards]
       
     Rails.logger.debug { "Boards recu en param : #{params[:boards]}" }  
+    params[:boards].each do |key, value|
+      Rails.logger.debug { "board : #{key} , value #{value}" }
+       board = Board.find(key)
+       @surfer.boards<< board if !@surfer.boards.include? board
+    end
 
     respond_to do |format|
       if @surfer.update_attributes(params[:surfer])

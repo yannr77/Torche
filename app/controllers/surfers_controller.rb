@@ -35,6 +35,8 @@ class SurfersController < ApplicationController
   # PUT /surfers/1
   def update
     @surfer = Surfer.find(params[:id])
+      
+    Rails.logger.debug { "Boards recu en param : #{params[:boards]}" }  
 
     respond_to do |format|
       if @surfer.update_attributes(params[:surfer])

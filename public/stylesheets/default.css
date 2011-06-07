@@ -48,7 +48,11 @@ a:hover{
 	padding: 3px;
 }
 .photo img{
-	margin-left: 10px;
+	margin-left: 47.5px;
+	margin-top: 50px;	
+}
+.photo2 img{
+	margin-left: 122.5px;
 	margin-top: 50px;	
 }
 .photos{
@@ -57,7 +61,7 @@ a:hover{
 	margin-left: 6px;
 	margin-right: 6px;
 }
-.photo .caption{
+.caption{
 	text-align: center;
 	margin-top: 8px;
 	margin-bottom: 30px;

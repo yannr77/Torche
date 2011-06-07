@@ -1,5 +1,11 @@
 html{
-	background-color: #667FA0;
+	/*background-color: #667FA0;*/
+	background-color: #E1E1E1;
+}
+.arrondi{
+	-moz-border-radius: 10px;
+ 	-webkit-border-radius: 10px;
+ 	border-radius: 10px;
 }
 
 /*LES TITRES ET ELEMENTS*/
@@ -11,56 +17,46 @@ h1{
 	padding: 20px;
 	color: #6699FF;
 }
-
 h2{
 	font-size: 18px;
 	font-weight: bold;
 	color: #6699FF;
 	margin: 5px;
 }
-
 p, blockquote{
 
 	text-align: justify;
 	text-indent: 30px;
 }
-
 em{
 	font-style: italic;
 	color: silver;
 }
-
 a{
 	color: orange;
 }
-
 a:hover{
 	font-weight: bold;
 }
-
 .table{
-	margin-left: 50px;
+	margin-left: 40px;
 }
-
 .ligne, th{
 	border-width: 1px;
 	border-style: solid; 
 	border-color: silver;
-	padding: 5px;
+	padding: 3px;
 }
-
-.photo{
-	text-align: center;
-	margin-top: 30px;
+.photo img{
+	margin-left: 10px;
+	margin-top: 50px;	
 }
-
 .photos{
 	margin-top: 6px;
 	margin-bottom: 6px;
 	margin-left: 6px;
-	margin-right: 6px;	
+	margin-right: 6px;
 }
-
 .photo .caption{
 	text-align: center;
 	margin-top: 8px;
@@ -68,70 +64,73 @@ a:hover{
 	font-size: 15px;
 	color:#8AB1CC;
 }
-
 .photos img {
 	width: 200px;
 	height: 160px;
+	-moz-border-radius: 10px;
+ 	-webkit-border-radius: 10px;
+ 	border-radius: 10px;
 }
-
 .photos img:hover {
 	width: 280px;
 	height: 220px;
 }
-
 /* La structure */
 
 body{
 	font-family: Skia, "Trebuchet MS", verdana, arial, helvetica, sans-serif;
 	font-size: 15px;	
-	width: 800px;
+	width: 750px;
 	margin: 40px auto;
 	padding: 0px 5px;
 	background-color: #fff;
+	border: 1.3px solid;
+	border-color: #909090;
 }
-
 .corps{
 	margin-top: 20px;
 	margin-bottom: 20px;
 	margin-left: 60px;
 	margin-right: 60px;
 }
-
 .corps_photos{
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
-
 .menu{
 	width: 200px;
 	float: left;
 	margin-top: 20px;
 	margin-bottom: 20px;
-	margin-left: 60px;
+	margin-left: 20px;
 	margin-right: 20px;	
 }
-
 .sous_menu{
 	margin-top:20px;
-	border: 2px solid;	
+	border: 1.7px solid;
+	border-color: #909090;
 }
-
 .sous_menu h3{
 	text-align: center;
 	color: #6699FF;
 	margin-top:5px;
 }
-
 .sous_menu li{
 	margin-left: 10px;
 	margin-top: 6px;
 	margin-bottom: 6px;	
 }
-
+.footer{
+	padding: 7px;
+}
 .pied_de_page{
 	clear: left;
 	margin-top: 30px;
-	padding:5px ;
+	margin-bottom: 25px;
+	margin-left: 122.5px;
+	padding:5px ;	
+	border: 2px solid;
+	width: 550px;
 }
 
 /* Scaffold.css*/
@@ -139,13 +138,11 @@ body{
 #notice {
   color: green;
 }
-
 .field_with_errors {
   padding: 2px;
   background-color: red;
   display: table;
 }
-
 #error_explanation {
   width: 450px;
   border: 2px solid red;
@@ -154,7 +151,6 @@ body{
   margin-bottom: 20px;
   background-color: #f0f0f0;
 }
-
 #error_explanation h2 {
   text-align: left;
   font-weight: bold;
@@ -165,7 +161,6 @@ body{
   background-color: #c00;
   color: #fff;
 }
-
 #error_explanation ul li {
   font-size: 12px;
   list-style: square;

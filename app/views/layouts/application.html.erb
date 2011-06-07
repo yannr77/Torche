@@ -6,7 +6,7 @@
  	<%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
-<body>
+<body class="arrondi">
 	<div id="en_tete">
 		<%= @time %> <%= say_hello %>
 	 
@@ -16,17 +16,14 @@
 
 	<%= yield %>
 	
-	<div id="footer">
+	<div class="footer" id="footer">
 		<a href="#en_tete"> Haut de page </a><br />
 	</div>
 
-
-	<div id="pied_de_page" class="pied_de_page"><p>
+	<div id="pied_de_page" class="pied_de_page arrondi"><p>
 		Code et Design par Neya. Premier site avec Ruby On Rails.
-		2011.</p><br />
-		<div id="contact">
-			<p>Me contacter <%= mail_to "yann.r.77@gmail.com", "e-mail", :encode => "javascript" %></p>
-		</div>
+		2011.<br />
+		Me contacter <%= mail_to "yann.r.77@gmail.com", "e-mail", :encode => "javascript" %></p>
 	</div>
 </body>
 

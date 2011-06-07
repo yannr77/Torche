@@ -1,4 +1,5 @@
-<%= form_for(@surfer) do |f| %>
+<% form_for @surfer, :html => { :multipart => true } do |f| %>
+<!-- <%= form_for(@surfer) do |f| %> -->
   <% if @surfer.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@surfer.errors.count, "error") %> prohibited this surfer from being saved:</h2>
@@ -30,14 +31,18 @@
 
 
 	<%= collection_select(:surfer, :state_id, State.all, :id, :name_capitalize) %> <br />
-
+	<br />
+	
 	<% Board.all.each do |board| %>
 		<%= input_checkbox_boards board, @surfer %>
 		<%= board.name %>
 	<% end %>
+	<br />
 	
+  <%= f.file_field :photo %>
 	
 	<div class="actions">
     <%= f.submit %>
   </div>
+<% end %>
 <% end %>

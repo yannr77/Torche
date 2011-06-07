@@ -12,4 +12,9 @@ class Surfer < ActiveRecord::Base
     validates :tel,  :presence => true
     validates_format_of :tel, :with => /0\d{1}[\.\-\ \\]?(\d{2}[\.\-\ \\]?){4}/
 
+
+    has_attached_file :photo, :styles => { :small => "150x150>" }
+    validates_attachment_presence :photo
+    validates_attachment_size :photo, :less_than => 5.megabytes
+    validates_attachment_content_type :photo, :content_type => ['image/jpeg', 'image/png']
 end

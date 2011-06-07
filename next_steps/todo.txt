@@ -1,21 +1,23 @@
-1 Utiliser le scaffolding pour créer les surfers:
-	rails generate scaffold NOM_DU_MODELE_AU_SINGULIER ATTRIBUT_1:TYPE ATTRIBUT_2:TYPE
+7 Mettre en ligne l'application
 
-	Un surfer est défini par :
-		nom
-		prénom
+8 Un surfer a une photo : utiliser paperclip:
+	http://railscasts.com/episodes/134-paperclip
+	
+	Attention il s'agit d'un railscasts pour rails 2.0 il faut changer :
+	
+	Ajouter dans le fichier Gemfile
+		gem "paperclip", "~> 2.3"
 		
-
-2 Ajouter un email
-
-3 Ajouter un numéro de téléphone
-
-4 Ajouter une liste de niveau pour les surfers (débutant, moyen, confirmé)
-rails generate model State name:string
-5 Un surfer a un niveau
-
-
-
-6 Ajouter une liste des boards avec au moins un nom et un autre attribut (taille, ou couleur)
-
-7 Un surfer a une ou plusieurs planches
+	Puis faire bundle install dans le terminal dans le dossier de l'applicaiton
+	
+	
+	<%= form_for @product, :html => { :multipart => true } do |f| %>
+	  ...
+	  <%= f.file_field :photo %>
+	  ...
+	<% end %>
+	
+		<% if condition %>
+		
+		<% end %>
+	

@@ -47,17 +47,22 @@ class SurfersController < ApplicationController
     Rails.logger.debug { "Boards recu en param : #{params[:boards]}" }  
 
     #Gestion des boards non cochées
-    check_boards = params[:boards].map { |id, value| Board.find(id) }
-    uncheck_boards = Board.all - check_boards
+    #avec condition car params[:boards] peut renvoyé nil si aucune board est coché et donc erreur !
 
-    # Gestion des boards cochées
-    check_boards.each do |board|
-      @surfer.boards<< board if !@surfer.boards.include? board
-    end    
-    
-    uncheck_boards.each do |board|
-      @surfer.boards.delete(board)
+    if params[:boards] == nil
+      uncheck_boards = @surfer.boards
+    else
+      check_boards = params[:boards].map { |id, value| Board.find(id) }
+      uncheck_boards = Board.all - check_boards
+
+      # Gestion des boards cochées
+      check_boards.each do |board|
+        @surfer.boards<< board if !@surfer.boards.include? board
+      end    
     end
+      uncheck_boards.each do |board|
+        @surfer.boards.delete(board)
+      end
     
     
     respond_to do |format|

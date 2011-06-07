@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rake', '~> 0.8.7'
 gem 'rails', '3.0.7'
+gem 'paperclip', '~> 2.3'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

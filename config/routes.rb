@@ -1,4 +1,6 @@
 Torche::Application.routes.draw do
+  devise_for :surfers
+
   resources :boards
 
   resources :surfers

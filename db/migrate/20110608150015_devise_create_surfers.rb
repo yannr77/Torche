@@ -1,7 +1,7 @@
 class DeviseCreateSurfers < ActiveRecord::Migration
   def self.up
-    create_table(:surfers) do |t|
-      t.database_authenticatable :null => false
+    change_table(:surfers) do |t|
+ #    t.database_authenticatable :null => false
       t.recoverable
       t.rememberable
       t.trackable
@@ -11,7 +11,8 @@ class DeviseCreateSurfers < ActiveRecord::Migration
       # t.lockable :lock_strategy => :failed_attempts, :unlock_strategy => :both
       # t.token_authenticatable
 
-
+      t.string :encrypted_password, :null => false, :default => '', :limit => 128
+  
       t.timestamps
     end
 

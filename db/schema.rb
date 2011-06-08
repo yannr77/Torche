@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110607152206) do
+ActiveRecord::Schema.define(:version => 20110608150015) do
 
   create_table "board_surfers", :force => true do |t|
     t.integer  "surfer_id"
@@ -44,6 +44,18 @@ ActiveRecord::Schema.define(:version => 20110607152206) do
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",                         :default => 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.string   "encrypted_password",     :limit => 128, :default => "", :null => false
   end
+
+  add_index "surfers", ["email"], :name => "index_surfers_on_email", :unique => true
+  add_index "surfers", ["reset_password_token"], :name => "index_surfers_on_reset_password_token", :unique => true
 
 end

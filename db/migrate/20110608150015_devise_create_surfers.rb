@@ -11,9 +11,7 @@ class DeviseCreateSurfers < ActiveRecord::Migration
       # t.lockable :lock_strategy => :failed_attempts, :unlock_strategy => :both
       # t.token_authenticatable
 
-      t.string :encrypted_password, :null => false, :default => '', :limit => 128
-  
-      t.timestamps
+      t.string :encrypted_password, :null => false, :default => '', :limit => 128  
     end
 
     add_index :surfers, :email,                :unique => true

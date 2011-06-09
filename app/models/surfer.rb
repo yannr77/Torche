@@ -5,7 +5,7 @@ class Surfer < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-attr_accessible  :password, :password_confirmation, :remember_me
+  attr_accessible  :email, :password, :password_confirmation, :remember_me, :name, :firstname, :tel, :photo
 
 #LIAISONS
     belongs_to :state
@@ -13,17 +13,20 @@ attr_accessible  :password, :password_confirmation, :remember_me
     has_many :boards, :through =>  :board_surfers
 
 #FORMULAIRE
-    #surfer
-    validates :name, :presence => true
-    validates :firstname, :presence => true
-    validates :email, :presence => true
-    validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
-    validates :tel,  :presence => true
-    validates_format_of :tel, :with => /0\d{1}[\.\-\ \\]?(\d{2}[\.\-\ \\]?){4}/
+    # surfer
+    validates :name, :presence => true, :on => :update 
+    validates :firstname, :presence => true, :on => :update
+    validates :email, :presence => true, :on => :update
+    validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, :on => :update
+    validates :tel,  :presence => true, :on => :update
+    validates_format_of :tel, :with => /0\d{1}[\.\-\ \\]?(\d{2}[\.\-\ \\]?){4}/, :on => :update
 
     #photo surfer
     has_attached_file :photo, :styles => { :small => "150x150>" }
-    validates_attachment_presence :photo
-    validates_attachment_size :photo, :less_than => 5.megabytes
-    validates_attachment_content_type :photo, :content_type => ['image/jpeg', 'image/png']
+    # validates_attachment_presence :photo, :on => :update
+    # validates_attachment_size :photo, :less_than => 5.megabytes, :on => :update
+    # validates_attachment_content_type :photo, :content_type => ['image/jpeg', 'image/png'], :on => :update
+        
+
+    
 end

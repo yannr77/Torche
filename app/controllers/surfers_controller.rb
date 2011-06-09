@@ -22,7 +22,7 @@ class SurfersController < ApplicationController
   # POST /surfers
   def create
     @surfer = Surfer.new(params[:surfer])
-
+ 
     respond_to do |format|
       if @surfer.save
         format.html { redirect_to(@surfer, :notice => 'Surfer was successfully created.') }
@@ -60,10 +60,10 @@ class SurfersController < ApplicationController
         @surfer.boards<< board if !@surfer.boards.include? board
       end    
     end
-      uncheck_boards.each do |board|
-        @surfer.boards.delete(board)
-      end
-    
+
+    uncheck_boards.each do |board|
+      @surfer.boards.delete(board)
+    end
     
     respond_to do |format|
       if @surfer.update_attributes(params[:surfer])

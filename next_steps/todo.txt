@@ -29,7 +29,8 @@ Dans le laout :
 	Comprendre comment créer un formulaire de sign up soit meme
 	Comment modifer le password d'un user equi a déjà un password (d'abord en console, ensuite via formulaire)
 	
-	
+
+
 Session 
 	MEttre en session la derniere date de visite
 	Afficher le temps écoulé depuis al derniere visite de  l'utilsiateur

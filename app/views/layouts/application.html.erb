@@ -8,8 +8,18 @@
 </head>
 <body class="arrondi">
 	<div id="en_tete">
+		<div class="time">
 		<%= @time %> <%= say_hello %>
-	 
+	 	</div>
+	
+		<div class="authentification">
+		<% if surfer_signed_in? %>
+		Signed in as <%= current_surfer.email %> Not you? <%= link_to "Sign out", destroy_surfer_session_path %>
+		<% else %>
+		<%= link_to "Sign up", new_surfer_registration_path %> <font color="#6699FF">or</font> <%= link_to "Sign in", new_surfer_session_path %>
+		<% end %>
+		</div>
+		
 		<h1><%= @title %></h1> 
 	</div>
 	<%= render(:partial => "application/menu") %>

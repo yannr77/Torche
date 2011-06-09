@@ -28,6 +28,11 @@
     <%= f.label :tel %><br />
     <%= f.text_field :tel %>
   </div>
+	<div class="field">
+    <%= f.label :password %><br />
+    <%= f.text_field :password %>
+  </div>
+
 
 
 	<%= collection_select(:surfer, :state_id, State.all, :id, :name_capitalize) %> <br />

@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  before_filter :set_time, :get_name
+  before_filter :last_time_visited, :get_name, :time_now
 
   def index
     @title = "Beg an Dorchenn"
@@ -22,8 +22,17 @@ class ApplicationController < ActionController::Base
     @name = params[:name]
   end
   
-  def set_time
-    @time = Time.now.strftime("%d-%m-%Y %H:%M")
+  def last_time_visited
+    if current_surfer
+      @time_since_last_connection = Time.now - (current_surfer.updated_at)
+    else
+      @time_since_last_connection = "Connectez-vous"
+    end
+    session[:last_time] = Time.now
   end
-
+  
+  def time_now
+    @time = Time.now
+  end
+  
 end

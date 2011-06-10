@@ -27,6 +27,12 @@ class Surfer < ActiveRecord::Base
     # validates_attachment_size :photo, :less_than => 5.megabytes, :on => :update
     # validates_attachment_content_type :photo, :content_type => ['image/jpeg', 'image/png'], :on => :update
         
+    def admin?
+      email == "yann.rochard@gmail.com"
+    end
 
+    def surfer?
+      persisted?
+    end
     
 end

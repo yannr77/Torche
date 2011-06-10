@@ -1,4 +1,5 @@
 class BoardsController < ApplicationController
+  load_and_authorize_resource
   # GET /boards
   # GET /boards.xml
   def index
@@ -34,6 +35,7 @@ class BoardsController < ApplicationController
 
   # GET /boards/1/edit
   def edit
+    authorize! :edit, @board
     @board = Board.find(params[:id])
   end
 

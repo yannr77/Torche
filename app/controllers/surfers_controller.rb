@@ -1,11 +1,12 @@
 class SurfersController < ApplicationController
+  load_and_authorize_resource
   # GET /surfers
   def index
     @surfers = Surfer.all #récupère tout les surfrs dans la variable @surfers
   end
 
   # GET /surfers/1
-  def show
+  def show    
     @surfer = Surfer.find(params[:id])
   end
 
@@ -16,7 +17,10 @@ class SurfersController < ApplicationController
 
   # GET /surfers/1/edit
   def edit
+
+    authorize! :edit, @surfer
     @surfer = Surfer.find(params[:id])
+    
   end
 
   # POST /surfers

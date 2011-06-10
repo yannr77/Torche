@@ -15,11 +15,17 @@
   	<tr>
     	<td class="ligne"><%= board.name %></td>
     	<td class="ligne"><%= board.size %></td>
-    	<td class="ligne"><%= link_to 'Show', board %></td>
-    	<td class="ligne"><%= link_to 'Edit', edit_board_path(board) %></td>
-    	<td class="ligne"><%= link_to 'Destroy', board, :confirm => 'Are you sure?', :method => :delete %></td>
-  	</tr>
-		<% end %>
+			<% if can? :show, board %>
+    		<td class="ligne"><%= link_to 'Show', board %></td>
+    	<% end %>
+			<% if can? :edit, board %>
+				<td class="ligne"><%= link_to 'Edit', edit_board_path(board) %></td>
+			<% end %>
+			<% if can? :destroy, board %>
+    		<td class="ligne"><%= link_to 'Destroy', board, :confirm => 'Are you sure?', :method => :delete %></td>
+			<% end %>  
+		</tr>
+	<% end %>
 	</table>
 </div>
 

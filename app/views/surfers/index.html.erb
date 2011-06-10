@@ -19,14 +19,23 @@
     	<td class="ligne"><%= surfer.name %></td>
     	<td class="ligne"><%= surfer.email %></td> 
    		<td class="ligne"><%= surfer.tel %></td> 
+			<% if can? :show, surfer %>
 			<td class="ligne"><%= link_to 'Show', surfer %></td>
-    	<td class="ligne"><%= link_to 'Edit', edit_surfer_path(surfer) %></td>
-    	<td class="ligne"><%= link_to 'Destroy', surfer, :confirm => 'Are you sure?', :method => :delete %></td>
-  	</tr>
+			<% end %>
+			<% if can? :edit, surfer %>    	
+			<td class="ligne"><%= link_to 'Edit', edit_surfer_path(surfer) %></td>
+  		<% end %>
+    	<% if can? :destroy, surfer %>
+			<td class="ligne"><%= link_to 'Destroy', surfer, :confirm => 'Are you sure?', :method => :delete %></td>
+  		<% end %>
+		</tr>
 		<% end %>
 	</table>
 </div>
 
 <br />
 
+<% if can? :manage, :all%>
 <%= link_to 'New Surfer', new_surfer_path %>
+<% end %>
+

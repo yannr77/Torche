@@ -15,7 +15,11 @@ class ApplicationController < ActionController::Base
     @title = "Photos"
   end
 
-
+  # in ApplicationController
+  def current_ability
+    @current_ability ||= Ability.new(current_surfer)
+  end
+  
   protected 
 
   def get_name
@@ -23,6 +27,7 @@ class ApplicationController < ActionController::Base
   end
   
   def last_time_visited
+     can? :manage, :all
     if current_surfer
       @time_since_last_connection = Time.now - (current_surfer.updated_at)
     else

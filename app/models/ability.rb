@@ -6,7 +6,8 @@ class Ability
     if surfer.admin?
       can :manage, :all
     elsif surfer.surfer?
-      can :show, Surfer
+      can [:show,:index], Surfer
+      can [:show,:index], Board
     end
   end
 end

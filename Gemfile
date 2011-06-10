@@ -3,7 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.8'
 gem 'paperclip', '~> 2.3'
 gem 'devise', '~> 1.3.4'
-
+gem 'cancan', '~> 1.6.5'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 

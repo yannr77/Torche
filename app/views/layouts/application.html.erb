@@ -21,6 +21,10 @@
 		<% end %>
 		</div>
 		
+		<div id="flash">
+			<%= flash[:alert] %>
+		</div>
+		
 		<h1><%= @title %></h1> 
 	</div>
 	<%= render(:partial => "application/menu") %>

@@ -1,6 +1,12 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
+    
+  rescue_from CanCan::AccessDenied do |exception|
+    redirect_to root_url, :alert => exception.message
+  end
 
+      
+      
   before_filter :last_time_visited, :get_name, :time_now
 
   def index
